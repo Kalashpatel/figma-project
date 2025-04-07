@@ -157,6 +157,7 @@ nav{
     z-index: 1000;
     position: sticky;
     top: 0;
+    position: relative;
 }
 .z-index{
     z-index: 1000;
@@ -295,25 +296,32 @@ nav{
 .dropdown-menu li:hover{
     background-color: rgba(var(--primary-color-rgb), 0.5);
 }
-/* main */
-main{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
+
+
 /* ======= hero ======= */
 
 .hero{
     width: 100%;
     min-height: 500px;
-    background: url(../images/gradient/Gradient.png);
+    /* background: url(../images/gradient/Gradient.png); */
     background-size: cover;
     background-position: center;
     top: 0;
     z-index: -1;
     overflow: hidden;
-    padding-top: 100px;
+    padding-top: 20px;
+    /* position: absolute; */
+}
+.hero::before{
+    content: '';
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url(../images/gradient/Gradient.png);
+    background-size: cover;
+    background-position: center;
 }
 .hero-pd{
     padding-top: 70px;
@@ -374,13 +382,18 @@ main{
     height: 580px;
     object-fit: cover;
     z-index: 1;
-    transform: translateX(90%);
     transition: all 1s ease;
-    opacity: 0;
+    animation: move-img 2s ease;
 }
-.hero:hover .banner-img img{
-    transform: translateX(0%);
-    opacity: 1;
+@keyframes move-img{
+    0%{
+        transform: translateX(90%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 .wave{
     position: absolute;
@@ -394,7 +407,7 @@ main{
 }
 .background > .left-img{
    position: absolute;
-   top: 0%;
+   top: -20px;
    left: -2%;
 }
 .background .gradient{
@@ -404,17 +417,36 @@ main{
     height: 500px;
     right: 12.5%;
     top: 17%;
-    transform: scale(0);
-    opacity: 0;
     transition: all 1.5s ease;
+    animation: g-scale 2.5s ease;
 }
-.hero:hover .background .gradient{
-    transform: scale(1);
-    opacity: 1;
+@keyframes g-scale{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
+.hero .title{
+  animation: move-title 2s ease;
+}
+@keyframes move-title{
+    0%{
+        transform: translateX(-90%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}   
+
+
 /* ===== section-2 menu ===== */
 .menu{
     position: relative;
+    overflow: hidden;
 }
 .relive-circle, .relive-doted, .relive-triangle, .half-circle, .img-back{
     position: absolute;
@@ -442,6 +474,9 @@ main{
     left: 12%;
     top: 6%;
 }
+.menu:hover .img-back{
+    animation: g-scale 1.5s ease;
+}
 .menu-img{
     width: 450px;
     height: 550px;
@@ -467,13 +502,34 @@ main{
 .menu-text .btn::before, .menu-text .btn::after{
     width: 150px;
 }
+.menu .title{
+    transform: translateX(90%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.menu:hover .title{
+    transform: translateX(0%);
+    opacity: 1;
+}
+.menu-img{
+    transform: translateY(90%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.menu:hover .menu-img{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
 
 /* section-4-favourites */
+
 .favourites, .best-sellar{
     position: relative;
     width: 100%;
     height: 720px;
-    padding-top: 30px;
+    padding-top: 40px;
+    overflow: hidden;
 }
 .favourites::before{
     content: '';
@@ -633,6 +689,15 @@ main{
     right: 0;
     width: 110px;
     height: 300px;
+}
+.favourites .title{
+    transform: translateY(-140%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.favourites:hover .title{
+    transform: translateY(-5%);
+    opacity: 1;
 }
 
 /* section-5-catagories */
@@ -957,6 +1022,7 @@ main{
     min-height: 200px;
     padding: 50px;
     padding-top: 120px;
+    padding-bottom: 120px;
     background: url(../images/gradient/Gradient.png);
     background-size: cover;
     background-position: center;
@@ -996,7 +1062,7 @@ main{
     width: 160px;
     height: 204px;
     border-radius: 20px;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     top: 15px;
     left: 30px;
     transform: scale(0);
@@ -1028,4 +1094,90 @@ main{
 .pink-dot{
     top: 40%;
     left: 10%;
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    min-height: 200px;
+    padding: 50px;
+    padding-top: 100px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+.footer h3{
+    font-size: 30px;
+    font-family: var(--sec-font);
+}
+.navigation-list{
+    display: flex;
+    gap: 60px;
+}
+.footer .navigation-list ul{
+    list-style: disc;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+.navigation h3{
+    margin-left: 40px;
+}
+.navigation-list ul li{
+    margin-top: 20px;
+    color: white;
+}
+.navigation-list ul li::marker{
+    color: var(--primary-color);
+}
+.footer-item{
+    display: flex;
+    gap: 20px;
+}
+.ad-margin{
+    margin-bottom: 30px;
+}
+.footer-item i{
+    background-color: rgba(var(--white-rgb), 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.footer-content h4{
+    font-family: var(--sec-font);
+    font-size: 20px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.footer-content p{
+    font-size: 18px;
+    color: rgba(var(--white-rgb), 0.7);
+    line-height: 1.5;
+}
+.footer-content a{
+    color: white;
+}
+.footer-content p a{
+    color: rgba(var(--white-rgb), 0.7);
+}
+.footer-content a:hover{
+    color: var(--primary-color);
+}
+.footer-icons ul{
+    display: flex;
+    gap: 20px;
+}
+.footer-icons ul li i{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(var(--white-rgb), 0.3);
+    text-align: center;
+    line-height: 60px;
+}
+.icon-margin{
+    margin-bottom: 40px;
 }
