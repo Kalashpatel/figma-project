@@ -232,6 +232,9 @@ h1, h2, h3, h4, h5, h6{
     line-height: 40px;
     display: inline-block;
 }
+.social-side li a{
+    color: var(--secondary-color)
+}
 .info-side li a i:hover, .social-side li a i:hover{
     color: var(--primary-color);
 }
