@@ -593,25 +593,26 @@ nav{
     margin-top: 20px;
     font-size: 14px;
 }
-.menu-text .btn::before, .menu-text .btn::after{
-    width: 150px;
+.menu-text .btn::before, .menu-text .btn::after, .menu-2-text .btn::before, .menu-2-text .btn::after{
+    width: 170px;
 }
-.menu .title{
+.menu .title, .menu-2 .title h2{
     transform: translateX(90%);
     opacity: 0;
     transition: all 1s ease;
     text-align: left;
 }
-.menu:hover .title{
+.menu:hover .title, .menu-2:hover .title h2
+{
     transform: translateX(0%);
     opacity: 1;
 }
-.menu-img{
+.menu-img, .menu-2-img{
     transform: translateY(90%);
     opacity: 0;
     transition: all 1s ease;
 }
-.menu:hover .menu-img{
+.menu:hover .menu-img, .menu-2:hover .menu-2-img{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -623,7 +624,7 @@ nav{
     position: relative;
     width: 100%;
     min-height: 200px;
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 120px;
     overflow: hidden;
 }
@@ -650,12 +651,13 @@ nav{
     opacity: 0;
     transition: all 1s ease;
 }
-.favourites:hover .item, .best-sellar:hover .item, .popular:hover .popular-item{
+.favourites:hover .item, .best-sellar:hover .item, .popular:hover .popular-item, .best:hover .popular-item{
     transform: translateY(0%);
     opacity: 1;
 }
 .item:hover{
     box-shadow: 0px 0px 15px var(--secondary-color);
+    transition: box-shadow 0.3s ease;
 }
 .item .item-img{
     width: 100%;
@@ -781,12 +783,12 @@ nav{
     width: 110px;
     height: 300px;
 }
-.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title{
+.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title, .offer-2 .title{
     transform: translateY(-140%);
     opacity: 0;
     transition: all 1s ease;
 }
-.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title{
+.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title, .offer-2:hover .title{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -1340,10 +1342,10 @@ nav{
 /* Home layout 2 */
 
 /* section-2 herosection */
-.hero-2, .popular{
+.hero-2, .popular, .menu-2, .options, .offer-2, .best{
     width: 100%;
     min-height: 200px;
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 120px;
     position: relative;
     overflow: hidden;
@@ -1378,7 +1380,7 @@ nav{
     margin-left: 70px;
     animation: move-img 2s ease;
 }
-.hero-2 > img{
+.hero-2 > img, .menu-2 > img, .offer-2 > img{
     position: absolute;
 }
 .triangle-2-h{
@@ -1472,4 +1474,191 @@ nav{
 }
 .transition-delay-3{
     transition-delay: 0.6s;
+}
+
+/* section-4-menu-2 */
+.menu-2{
+    background: url(../images/gradient/Gradient.png);
+    background-size: cover;
+    background-position: center;
+}
+.menu-2-img{
+    margin-left: 45px;
+}
+.menu-2-text .title{
+    text-align: left;
+}
+.menu-2-text .title p{
+    margin-bottom: 20px;
+    color: var(--text-color-light);
+}
+.menu-2-text p{
+    color: var(--text-color-light);
+    margin-bottom: 50px;
+}
+.menu-2-text .title h2{
+    margin-bottom: 40px;
+}
+.menu-2-text .btn{
+    width: 260px;
+}
+.right-2-m{
+    bottom: 5%;
+    right: 0;
+}
+.dot-2-m{
+    top: 40%;
+    left: 5%;
+}
+.circle-2-m{
+    top: 55%;
+    left: 7%;
+}
+.triangle-2-m{
+    top: 20%;
+    right: 10%;
+}
+
+/* section-5-options */
+.item-first, .item-second, .item-third{
+    position: relative;
+    overflow: hidden;
+}
+.item-first::before, .item-third::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--black-rgb), 0.4);
+    color: rgba(var(--white-rgb), 0.8);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    content: '';
+}
+.item-first::before{
+    transform: translateX(100%);
+}
+.item-third::before{
+    transform: translateX(-100%);
+}
+.item-text-first, .item-third-text{
+    position: absolute;
+    z-index: 3;
+    top: 45%;
+    left: 40%;
+    transition: all 0.5s ease;
+}
+.item-text-first{
+    transform: translateX(260%);
+}
+.item-third-text{
+    transform: translateX(-260%);
+}
+.item-text-first a, .item-third-text a{
+    color: rgba(var(--white-rgb), 0.7);
+    transition: all 0.3s ease;
+}
+.item-text-first a:hover, .item-third-text a:hover{
+    color: var(--primary-color);
+}
+.item-text-first a i, .item-third-text a i{
+    margin: 0px 5px;
+}
+.item-second::before, .item-second::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(var(--black-rgb), 0.5);
+    transition: all 0.5s ease;
+}
+.item-second::before{
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+.item-second::after{
+    top: 0; 
+    left: 50%;
+    transform: translateX(100%);
+}
+.item-second-text{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+.item-second-text i{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--primary-color-rgb), 0.7);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(var(--white-rgb), 0.7);
+    margin-bottom: 20px;
+}
+.item-second-text p{
+    color: rgba(var(--white-rgb), 0.7);
+}
+.item-second:hover .item-second-text{
+    opacity: 1;
+}
+.item-first:hover::before, .item-first:hover .item-text-first, .item-second:hover::before, .item-second:hover::after, .item-third:hover::before, .item-third:hover .item-third-text{
+    transform: translateX(0%);
+}
+
+/* section-6-offer */
+
+.offer-2{
+    background-color: var(--primary-color);
+    text-align: center;
+}
+.offer-2 .title h2{
+    color: white;
+    font-size: 112px;
+}
+.offer-2 p{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.offer-2 p span{
+    color: yellow;
+}
+.offer-2 .btn{
+    width: 250px;
+    background-color: var(--secondary-color);
+    margin: 10px auto;
+}
+.offer-2 .btn::before, .offer-2 .btn::after{
+    display: none;
+}
+.offer-2-code{
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+}
+.dot-2-o{
+    top: 25%;
+    left: 25%;
+}
+.wave-2-o{
+    bottom: 25%;
+    right: 25%;
+}
+.left-img-o{
+    bottom: 0;
+    left: 0;
+}
+.right-img-o{
+    right: -2%;
+    bottom: 5%;
 }
