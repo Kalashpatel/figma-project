@@ -782,12 +782,12 @@ nav{
     width: 110px;
     height: 300px;
 }
-.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title, .offer-2 .title, .best .title, .review-2 .title, .sign-in-2 .title, .flavours-3 .title, .catagories-3 .title, .popular-3 .title, .review-3 .title, .questions .title{
+.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title, .offer-2 .title, .best .title, .review-2 .title, .sign-in-2 .title, .flavours-3 .title, .catagories-3 .title, .popular-3 .title, .review-3 .title, .questions .title, .members .title{
     transform: translateY(-140%);
     opacity: 0;
     transition: all 1s ease;
 }
-.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title, .offer-2:hover .title, .best:hover .title, .review-2:hover .title, .sign-in-2:hover .title, .flavours-3:hover .title, .catagories-3:hover .title, .popular-3:hover .title, .review-3:hover .title, .questions:hover .title{
+.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title, .offer-2:hover .title, .best:hover .title, .review-2:hover .title, .sign-in-2:hover .title, .flavours-3:hover .title, .catagories-3:hover .title, .popular-3:hover .title, .review-3:hover .title, .questions:hover .title, .members:hover .title{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -1855,17 +1855,17 @@ nav{
     height: 520px;
     margin-left: 80px;
 }
-.menu-3 .title {
+.menu-3 .title, .about-journey .title {
     margin-bottom: 10px;
 }
-.menu-3 p{
+.menu-3 p, .about-journey p{
     margin-left: 0;
     margin-top: 15px;
     margin-bottom: 10px;
     text-align: left;
     color: var(--text-color-light);
 }
-.menu-3 .btn{
+.menu-3 .btn, .about-journey .btn{
     margin-top: 40px;
 }
 .menu-3 .relive-doted{
@@ -1879,11 +1879,15 @@ nav{
     background-size: cover;
     background-position: center;
 }
-.flavours-item, .review-item{
+.flavours-item, .review-item, .member-item{
     width: 100%;
     transform: translateY(90%);
     opacity: 0;
     transition: all 1s ease;
+}
+.members:hover .member-item{
+    transform: translateY(0%);
+    opacity: 1;
 }
 .flavours-item .flavours-img{
     width: 100%;
@@ -1897,7 +1901,7 @@ nav{
     object-fit: cover;
     transition: all 0.5s ease;
 }
-.flavours-item:hover .flavours-img img{
+.flavours-item:hover .flavours-img img, .member-item:hover .member-img img{
     transform: scale(1.1);
 }
 .flavours-content{
@@ -2048,7 +2052,7 @@ nav{
 }
 
 /* section-8-questions */
-.questions{
+.questions, .about-title{
     background: url(../images/gradient/Gradient.png);
     background-size: cover;
     background-position: center;
@@ -2081,4 +2085,130 @@ nav{
 .questions:hover .left-list, .questions:hover .right-list{
     transform: translateX(0%);
     opacity: 1;
+}
+
+/* =========================================== about us =============================================== */
+/* section-1 title */
+.about-title, .about-journey, .members{
+    width: 100%;
+    min-height: 200px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+    overflow: hidden;
+}
+.about-content{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+.about-content p{
+    line-height: 60px;
+    font-weight: 700;
+}
+.about-content p span{
+    color: var(--primary-color);
+}
+
+/* section-2 journey */
+.journey-img{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+.journey-img img{
+    transition: all 1.5s ease;
+    transform: scale(0);
+}
+.about-journey:hover .journey-img img{
+    transform: scale(1);
+}
+.journey-text .title{
+    text-align: left;
+}
+.journey-text p{
+    font-size: 18px;
+}
+.journey-text .btn{
+    width: 180px;
+}
+.journey-text .title h2{
+    transform: translateX(90%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.about-journey:hover .journey-text .title h2{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+/* section-3-mission */
+.mission .title h2{
+    font-size: 70px;
+}
+.mission-content{
+    margin-left: 50px;
+}
+.mission-content .title p{
+    font-size: 20px;
+    color: rgba(var(--white-rgb), 0.7);
+}
+
+/* section-4-stastic */
+.statistic .review-item h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+.statistic .review-item h1 sup{
+    color: var(--primary-color);
+}
+.statistic .review-item p{
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color-light);
+}
+
+/* section-5-members */
+.members{
+    background: url(../images/gradient/Gradient-m.png);
+    background-size: cover;
+    background-position: center;
+}
+.member-item{
+    width: 100%;
+    min-height: 200px;
+}
+.member-img img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+.member-info{
+    margin-top: 30px;
+    text-align: center;
+}
+.member-info > ul >li:not(:last-child){
+    margin-bottom: 15px;
+}
+.member-info ul li h3{
+    font-size: 30px;
+    font-family: var(--sec-font);
+    font-weight: 600;
+}
+.member-info ul li:nth-child(2){
+    color: var(--text-color-light);
+}
+.member-info .social-side li a i{
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: var(--primary-color);
+    line-height: 50px;
+}
+.member-info .social-side{
+    margin-left: 55px;
 }
