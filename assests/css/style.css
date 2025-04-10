@@ -650,7 +650,7 @@ nav{
     opacity: 0;
     transition: all 1s ease;
 }
-.favourites:hover .item, .best-sellar:hover .item, .popular:hover .popular-item, .best:hover .popular-item, .flavours-3:hover .flavours-item{
+.favourites:hover .item, .best-sellar:hover .item, .popular:hover .popular-item, .best:hover .popular-item, .flavours-3:hover .flavours-item, .popular-3:hover .flavours-item, .review-3:hover .review-item{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -782,12 +782,12 @@ nav{
     width: 110px;
     height: 300px;
 }
-.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title, .offer-2 .title, .best .title, .review-2 .title, .sign-in-2 .title, .flavours-3 .title, .catagories-3 .title{
+.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title, .offer-2 .title, .best .title, .review-2 .title, .sign-in-2 .title, .flavours-3 .title, .catagories-3 .title, .popular-3 .title, .review-3 .title, .questions .title{
     transform: translateY(-140%);
     opacity: 0;
     transition: all 1s ease;
 }
-.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title, .offer-2:hover .title, .best:hover .title, .review-2:hover .title, .sign-in-2:hover .title, .flavours-3:hover .title, .catagories-3:hover .title{
+.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title, .offer-2:hover .title, .best:hover .title, .review-2:hover .title, .sign-in-2:hover .title, .flavours-3:hover .title, .catagories-3:hover .title, .popular-3:hover .title, .review-3:hover .title, .questions:hover .title{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -1783,7 +1783,7 @@ nav{
 /* ===================================== home layout 3 ================================*/
 
 /* section-1 hero */
-.hero-3, .flavours-3{
+.hero-3, .flavours-3, .offer-3, .popular-3, .review-3, .questions{
     width: 100%;
     min-height: 200px;
     padding-top: 120px;
@@ -1874,12 +1874,12 @@ nav{
 }
 
 /* section-4-flavours */
-.flavours-3{
+.flavours-3, .popular-3{
     background: url(../images/gradient/Gradient.png);
     background-size: cover;
     background-position: center;
 }
-.flavours-item{
+.flavours-item, .review-item{
     width: 100%;
     transform: translateY(90%);
     opacity: 0;
@@ -1933,7 +1933,7 @@ nav{
 .transition-delay-3{
     transition-delay: 0.6s;
 }
-.flavours-3 > img{
+.flavours-3 > img, .offer-3 > img, .popular-3 > img{
     position: absolute;
 }
 .right-3-f{
@@ -1961,4 +1961,124 @@ nav{
     position: relative;
     background: url(../images/home-layout-3/section-4-favourite/figure-4.png);
     background-size: cover;
+}
+
+/* section-6 offer */
+.offer-3{
+    background-color: var(--secondary-color);
+}
+.offer-3 .title{
+    color: white;
+    text-align: left;
+}
+.offer-3 .title h2{
+    font-size: 100px;
+}
+.offer-3 .title p span{
+    color: yellow;
+    font-size: 30px;
+}
+.offer-3 .title p{
+    font-size: 30px;
+}
+.offer-3 .btn{
+    width: 200px;
+}
+.offer-3 .btn::before, .offer-3 .btn::after{
+    display: none;
+}
+.offer-3 .btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px var(--primary-color);
+}
+.back-img-3-o{
+    right: 0;
+    top: 0;
+    width: 750px;
+    height: 100%;
+}
+.triangle-3-o{
+    top: 30%;
+    left: 5%;
+}
+.cross-3-o{
+    bottom: 20%;
+    left: 4%;
+}
+.wave-3-o{
+    bottom: 10%;
+    left: 40%;
+}
+
+/* section-7-popular */
+.right-img-3-p{
+    bottom: 10%;
+    left: 0;
+}
+
+/* section-8-review */
+.review-item{
+    width: 100%;
+    min-height: 100px;
+    background-color: #f5f5f5;
+    border-radius: 30PX;
+    border-bottom: 4px solid var(--primary-color);
+    padding: 20px;
+}
+.review-item p{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.review-face-3{
+    display: flex;
+    gap: 20px;
+}
+.review-rating-3 ul li:not(:last-child){
+    margin-bottom: 5px;
+}
+.review-rating-3 ul li:nth-child(2){
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.review-rating-3 ul li:nth-child(3){
+    font-size: 18px;
+    color: var(--text-color-light);
+}
+
+/* section-8-questions */
+.questions{
+    background: url(../images/gradient/Gradient.png);
+    background-size: cover;
+    background-position: center;
+}
+.questions ul li{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-radius: 20px;
+}
+.questions ul li:not(:last-child){
+    margin-bottom: 20px;
+}
+.questions ul li p{
+    line-height: 60px;
+    margin-left: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.left-list{
+    transform: translateX(-90%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.right-list{
+    transform: translateX(90%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.questions:hover .left-list, .questions:hover .right-list{
+    transform: translateX(0%);
+    opacity: 1;
 }
