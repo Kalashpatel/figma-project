@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6{
     background-color: rgba(var(--white-rgb), 0.7);
     border-radius: 50%;
     text-align: center;
-    line-height: 30px;
+    line-height: 31px;
     display: inline-block;
 }
 .social-side li a{
@@ -538,7 +538,7 @@ nav{
 
 
 /* ===== section-2 menu ===== */
-.menu{
+.menu, .menu-3{
     position: relative;
     overflow: hidden;
 }
@@ -568,7 +568,7 @@ nav{
     left: 12%;
     top: 6%;
 }
-.menu:hover .img-back{
+.menu:hover .img-back, .menu-3:hover .img-back{
     animation: g-scale 1.5s ease;
 }
 .menu-img{
@@ -596,14 +596,13 @@ nav{
 .menu-text .btn::before, .menu-text .btn::after, .menu-2-text .btn::before, .menu-2-text .btn::after{
     width: 170px;
 }
-.menu .title, .menu-2 .title h2{
+.menu .title, .menu-2 .title h2, .menu-3 .title h2{
     transform: translateX(90%);
     opacity: 0;
     transition: all 1s ease;
     text-align: left;
 }
-.menu:hover .title, .menu-2:hover .title h2
-{
+.menu:hover .title, .menu-2:hover .title h2, .menu-3:hover .title h2{
     transform: translateX(0%);
     opacity: 1;
 }
@@ -612,7 +611,7 @@ nav{
     opacity: 0;
     transition: all 1s ease;
 }
-.menu:hover .menu-img, .menu-2:hover .menu-2-img{
+.menu:hover .menu-img, .menu-2:hover .menu-2-img, .menu-3:hover .menu-img{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -620,7 +619,7 @@ nav{
 
 /* section-4-favourites */
 
-.favourites, .best-sellar, .catagories, .review, .sign-in, .follow-us{
+.favourites, .best-sellar, .catagories, .review, .sign-in, .follow-us, .catagories-3{
     position: relative;
     width: 100%;
     min-height: 200px;
@@ -651,7 +650,7 @@ nav{
     opacity: 0;
     transition: all 1s ease;
 }
-.favourites:hover .item, .best-sellar:hover .item, .popular:hover .popular-item, .best:hover .popular-item{
+.favourites:hover .item, .best-sellar:hover .item, .popular:hover .popular-item, .best:hover .popular-item, .flavours-3:hover .flavours-item{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -783,12 +782,12 @@ nav{
     width: 110px;
     height: 300px;
 }
-.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title, .offer-2 .title, .best .title, .review-2 .title, .sign-in-2 .title{
+.favourites .title, .best-sellar .title, .catagories .title, .offer .title, .review .title, .sign-in .title, .follow-us .title, .popular .title, .offer-2 .title, .best .title, .review-2 .title, .sign-in-2 .title, .flavours-3 .title, .catagories-3 .title{
     transform: translateY(-140%);
     opacity: 0;
     transition: all 1s ease;
 }
-.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title, .offer-2:hover .title, .best:hover .title, .review-2:hover .title, .sign-in-2:hover .title{
+.favourites:hover .title, .best-sellar:hover .title, .catagories:hover .title, .offer:hover .title, .review:hover .title, .sign-in:hover .title, .follow-us:hover .title, .popular:hover .title, .offer-2:hover .title, .best:hover .title, .review-2:hover .title, .sign-in-2:hover .title, .flavours-3:hover .title, .catagories-3:hover .title{
     transform: translateY(0%);
     opacity: 1;
 }
@@ -803,7 +802,7 @@ nav{
 }
 
 /* section-5-catagories */
-.catagories .catagory-item{
+.catagories .catagory-item, .catagories-3 .catagory-item{
     position: relative;
     width: 100%;
     height: 400px;
@@ -1778,4 +1777,188 @@ nav{
 
 .footer-2{
     padding-top: 200px;
+}
+
+
+/* ===================================== home layout 3 ================================*/
+
+/* section-1 hero */
+.hero-3, .flavours-3{
+    width: 100%;
+    min-height: 200px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-3{
+    background: url(../images/home-layout-3/section-1-hero/Section.png);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+}
+.hero-3-content{
+    width:100%;
+    height: 650px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 90px 100px #c23e82;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    animation: move-title 2s ease;
+}
+.hero-3-content .title{
+    padding-top: 100px;
+}
+.hero-3-content .title h2, .hero-3-content .title span{
+    font-size: 100px;
+}
+.hero-3-content .title p{
+    margin-bottom: 30px;
+}
+.hero-3-content .btn{
+    width: 320px;
+    margin-left: 155px;
+    background-color: var(--secondary-color);
+}
+.hero-3-content .btn::before, .hero-3-content .btn::after{
+    background-color: var(--primary-color);
+    width: 182px;
+    height: 182px;
+}
+.hero-3-content .btn:hover{
+    box-shadow: 0px 0px 10px var(--primary-color);
+}
+.hero-3-content > img{
+    position: absolute;
+}
+.img-3-h{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+}
+.pink-dot-3-h{
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* section-3-menu */
+.menu-3{
+    padding-bottom: 50px;
+}
+.menu-3 .menu-img{
+    width: 590px;
+    height: 520px;
+    margin-left: 80px;
+}
+.menu-3 .title {
+    margin-bottom: 10px;
+}
+.menu-3 p{
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: var(--text-color-light);
+}
+.menu-3 .btn{
+    margin-top: 40px;
+}
+.menu-3 .relive-doted{
+    top: 10%;
+    left: 15%;
+}
+
+/* section-4-flavours */
+.flavours-3{
+    background: url(../images/gradient/Gradient.png);
+    background-size: cover;
+    background-position: center;
+}
+.flavours-item{
+    width: 100%;
+    transform: translateY(90%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.flavours-item .flavours-img{
+    width: 100%;
+    height: 189px;
+    background-color: white;
+    border-radius: 50%;
+}
+.flavours-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+.flavours-item:hover .flavours-img img{
+    transform: scale(1.1);
+}
+.flavours-content{
+    margin-top: 20px;
+    text-align: center;
+}
+.flavours-content .rating{
+    display: flex;
+    gap: 10px;
+    margin-left: 60px;
+}
+.flavours-content .rating span{
+    font-weight: 700;
+}
+.flavours-content ul li:not(:last-child){
+    margin-bottom: 20px;
+}
+.flavours-content h3{
+    font-family: var(--sec-font);
+    font-weight: 700;
+}
+.flavours-content ul li:nth-child(3){
+    font-size: 25px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.transition-delay-1{
+    transition-delay: 0.2s;
+}
+.transition-delay-2{
+    transition-delay: 0.4s;
+}
+.transition-delay-3{
+    transition-delay: 0.6s;
+}
+.flavours-3 > img{
+    position: absolute;
+}
+.right-3-f{
+    right: 0;
+    bottom: 15%;
+}
+
+/* section-5-catagories-3 */
+.classic-flavours{
+    position: relative;
+    background: url(../images/home-layout-3/section-4-favourite/Figure-1.png);
+    background-size: cover;
+}
+.seasonal-special{
+    position: relative;
+    background: url(../images/home-layout-3/section-4-favourite/Figure-2.png);
+    background-size: cover;
+}
+.cake{
+    position: relative;
+    background: url(../images/home-layout-3/section-4-favourite/figure-3.png);
+    background-size: cover;
+}
+.pints{
+    position: relative;
+    background: url(../images/home-layout-3/section-4-favourite/figure-4.png);
+    background-size: cover;
 }
