@@ -2089,7 +2089,7 @@ nav{
 
 /* =========================================== about us =============================================== */
 /* section-1 title */
-.page-title, .about-journey, .members{
+.page-title, .about-journey, .members, .policies{
     width: 100%;
     min-height: 200px;
     padding-top: 120px;
@@ -2226,4 +2226,23 @@ nav{
 
 .item-row-2{
     margin-top: 100px;
+}
+
+/* =============================== privacy policy ================================ */
+.policy-content{
+    font-size: 16px;
+    text-align: left;
+}
+.policy-content h3{
+    font-family: var(--sec-font);
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+}
+.policy-content p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.policy-content ul li h3{
+    font-size: 20px;
 }
