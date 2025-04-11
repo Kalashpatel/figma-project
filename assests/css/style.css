@@ -2089,7 +2089,7 @@ nav{
 
 /* =========================================== about us =============================================== */
 /* section-1 title */
-.page-title, .about-journey, .members, .policies{
+.page-title, .about-journey, .members, .policies, .contact-content{
     width: 100%;
     min-height: 200px;
     padding-top: 120px;
@@ -2245,4 +2245,108 @@ nav{
 }
 .policy-content ul li h3{
     font-size: 20px;
+}
+
+/* ================================ contact us =================================== */
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+.left-content{
+    width: 100%;
+    min-height: 100px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px black;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.location-icon, .call-icon, .email-icon{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    position: relative;
+}
+.location-icon img{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.call-icon img, .email-icon img{
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.email-icon img{
+    left: 45%;
+}
+.location-content{
+    width: 250px;
+}
+.location-content h3{
+    font-family: var(--sec-font);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.location-content p{
+    font-size: 16px;
+    color: var(--text-color-light);
+}
+.location-content a{
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.location-content a:hover p{
+    color: var(--primary-color);
+}
+.form-side{
+    width: 100%;
+    min-height: 200px;
+    padding: 30px;
+}
+.f-name label{
+    margin-left: 5px;
+}
+.f-name input{
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid rgba(var(--black-rgb), 0.4);
+    outline: none;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.form-row-2{
+    margin-top: 25px;
+}
+.form-side textarea{
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid rgba(var(--black-rgb), 0.4);
+    padding: 20px;
+}
+.form-side button{
+    outline: none;
+    margin-top: 20px;
+}
+.form-side button a{
+    color: white;
+}
+.map iframe{
+    margin-bottom: 0px;
 }
