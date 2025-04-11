@@ -2089,7 +2089,7 @@ nav{
 
 /* =========================================== about us =============================================== */
 /* section-1 title */
-.page-title, .about-journey, .members, .policies, .contact-content{
+.page-title, .about-journey, .members, .policies, .contact-content, .thank-you{
     width: 100%;
     min-height: 200px;
     padding-top: 120px;
@@ -2349,4 +2349,33 @@ nav{
 }
 .map iframe{
     margin-bottom: 0px;
+}
+
+/* ====================================== thank you ================================== */
+.thank-you{
+    width: 100%;
+    min-height: 200px;
+    background: url(../images/gradient/Gradient-m.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.thank-you-img{
+    margin-left: 43%;
+}
+.thank-you-content .title{
+    margin-top: 50px;
+}
+.thank-you-content .title h2{
+    font-size: 100px;
+}
+.thank-you-content .btn{
+    width: 200px;
+    margin-left: 42%;
+}
+.thank-you-content .btn::before, .thank-you-content .btn::after{
+    width: 130px;
+}
+.thank-you-content .btn i{
+    margin-right: 5px;
 }
